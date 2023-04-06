@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+          <div class="display-div">
+            <input type="text" class="display" readonly>
+          </div>
+          <div class="buttons">
+            <div>
+              <input type="button" class="button ops" value="AC" onclick="document.querySelector('.display-div input').value = '';">
+              <input type="button" class="button ops" value="DE" onclick="document.querySelector('.display-div input').value = document.querySelector('.display-div input').value.toString().slice(0,-1);">
+              <input type="button" class="button ops" value="." onclick="document.querySelector('.display-div input').value += '.'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button ops" value="/" onclick="document.querySelector('.display-div input').value += '/'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+            </div>
+            <div>
+              <input type="button" class="button" value="7" onclick="document.querySelector('.display-div input').value += '7'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button" value="8" onclick="document.querySelector('.display-div input').value += '8'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button" value="9" onclick="document.querySelector('.display-div input').value += '9'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button ops" value="*" onclick="document.querySelector('.display-div input').value += '*'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+            </div> 
+            <div>
+              <input type="button" class="button" value="4" onclick="document.querySelector('.display-div input').value += '4'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button" value="5" onclick="document.querySelector('.display-div input').value += '5'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button" value="6" onclick="document.querySelector('.display-div input').value += '6'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button ops" value="+" onclick="document.querySelector('.display-div input').value += '+'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+            </div> 
+            <div>
+              <input type="button" class="button" value="1" onclick="document.querySelector('.display-div input').value += '1'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button" value="2" onclick="document.querySelector('.display-div input').value += '2'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button" value="3" onclick="document.querySelector('.display-div input').value += '3'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+              <input type="button" class="button ops" value="-" onclick="document.querySelector('.display-div input').value += '-'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+            </div>
+                <div>
+                    <input type="button" class="button" value="00"  onclick="document.querySelector('.display-div input').value += '00'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+                    <input type="button" class="button" value="0"  onclick="document.querySelector('.display-div input').value += '0'; document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+                    <input type="button" class="button span-two ops" value="=" onclick="document.querySelector('.display-div input').value = eval(document.querySelector('.display-div input').value);  document.querySelector('.display-div input').scrollLeft = document.querySelector('.display-div input').scrollWidth;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">A Calculator Made With <strong> &hearts; </strong> By Abhinaba</footer>
+    <script>
+        const input = document.querySelector('.display');
+
+input.addEventListener('input', () => {
+  input.selectionStart = input.selectionEnd = input.value.length;
+});
+
+    </script>
+</body>
+</html>

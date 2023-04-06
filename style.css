@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    margin: 0;
+    background-color: aliceblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: #3b4455;
+    border-radius: 10px;
+    padding: 20px;
+    height: 540px;
+    width: 350px;
+    margin-top: 50px;
+}
+.display-div {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+}
+.display{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    flex: 1;
+    background-color: transparent;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+border: 0px solid;
+outline: none;
+white-space: nowrap;
+overflow: hidden;
+direction:ltr;
+
+}
+.container .buttons div {
+    width: 100%;
+    height: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.container .buttons input{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #3b4455;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.1) ;
+font-size: 20px;
+color: #fff;
+border: 0px solid;
+outline: none;
+margin-bottom: 20px;
+cursor: pointer;
+transition: .3s all ease;
+
+}
+.container .buttons input:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.span-two {
+    width: 142px !important;
+
+}
+.ops {
+    color: rgb(85, 255, 85) !important;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.footer strong {
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+}
